@@ -1,4 +1,4 @@
-name: BirimTestOrnek1 CI
+name: BalMarket CI
 
 on:
   push:
@@ -23,10 +23,10 @@ jobs:
         distribution: 'corretto'
         cache: maven
     - name: Build with Maven
-      run: mvn -B install --file BirimTestOrnek1/pom.xml
+      run: mvn -B install --file BalMarket/pom.xml
     - name: Coverage
       id: jacoco
       uses: madrapps/jacoco-report@v1.3
       with:
-        paths: ${{ github.workspace }}/BirimTestOrnek1/target/site/jacoco/jacoco.xml
+        paths: ${{ github.workspace }}/BalMarket/target/site/jacoco/jacoco.xml
         token: ${{ secrets.GITHUB_TOKEN }}
