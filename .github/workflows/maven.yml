@@ -33,3 +33,4 @@ jobs:
         with:
           paths: ${{ github.workspace }}/BalMarket/target/site/jacoco/jacoco.xml
           token: ${{ secrets.GITHUB_TOKEN }}
+
